@@ -1,7 +1,7 @@
 export type Stage='motivation'|'recall'|'discovery'|'practice'|'feedback'|'reflection';
 export type Form='individual'|'pair'|'group'|'class';
 export type Source={title:string;url:string;provider:string};
-export type Method={id:string;name:string;aliases:string[];summary:string;steps:string[];stages:Stage[];forms:Form[];tags:string[];timeMin:number;timeMax:number;gradesMin:number;gradesMax:number;materials:string;result:string;check:string;sources:Source[];type:string;caution?:string;group:'method'|'filler'|'organizer';origin?:string;examples?:{english?:string;math?:string;history?:string;practical?:string}};
+export type Method={id:string;name:string;aliases:string[];summary:string;steps:string[];stages:Stage[];forms:Form[];tags:string[];timeMin:number;timeMax:number;gradesMin:number;gradesMax:number;materials:string;result:string;check:string;sources:Source[];type:string;caution?:string;guideTip?:string;group:'method'|'filler'|'organizer';origin?:string;examples?:{english?:string;math?:string;history?:string;practical?:string}};
 export type Magic={id:string;name:string;category:string;summary:string;goal:string;rules:string[];progress:string;finish:string;learning:string;check:string;examples:{english:string;math:string;history:string};pairs:string[];scope:string;minutes:number;materials:string;adapt:string;launch:string};
 export type LessonEntry={id:string;methodId:string;stage:Stage;minutes:number;task:string;evidence:string};
 export type Lesson={id?:string;title:string;subject:string;grade:string;duration:number;goal:string;entries:LessonEntry[];magicId:string|null;magicMinutes:number;magicPlan:string;updatedAt?:number};
