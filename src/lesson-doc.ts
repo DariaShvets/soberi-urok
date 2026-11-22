@@ -42,6 +42,7 @@ export function createLessonDoc(lesson:Lesson,methods:Method[],magic?:Magic){
   if(method){
    label('Алгоритм приёма');
    method.steps.forEach((step,index)=>add(`${index+1}. ${step}`));
+   if(method.guideTip){label('Практическая подсказка');add(method.guideTip);}
    if(method.materials){label('Материалы');add(method.materials);}
    if(method.sources.length){
     label('Источники');
